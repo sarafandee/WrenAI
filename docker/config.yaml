@@ -163,3 +163,28 @@ pipes:
     llm: litellm_llm.default
   - name: sql_diagnosis
     llm: litellm_llm.default
+
+---
+settings:
+  doc_endpoint: https://docs.getwren.ai
+  is_oss: true
+  engine_timeout: 30
+  column_indexing_batch_size: 50
+  table_retrieval_size: 10
+  table_column_retrieval_size: 100
+  allow_intent_classification: true
+  allow_sql_generation_reasoning: true
+  allow_sql_functions_retrieval: true
+  enable_column_pruning: false
+  max_sql_correction_retries: 3
+  query_cache_maxsize: 1000
+  query_cache_ttl: 3600
+  langfuse_host: https://cloud.langfuse.com
+  langfuse_enable: false
+  logging_level: DEBUG
+  development: false
+  historical_question_retrieval_similarity_threshold: 0.9
+  sql_pairs_similarity_threshold: 0.7
+  sql_pairs_retrieval_max_size: 10
+  instructions_similarity_threshold: 0.7
+  instructions_top_k: 10
